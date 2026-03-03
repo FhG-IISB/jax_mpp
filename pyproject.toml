@@ -26,3 +26,10 @@ gpu = ["jax[cuda12]"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["jax_mpp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = ["pytest>=7.0"]
